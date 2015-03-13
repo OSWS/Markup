@@ -2,7 +2,7 @@ global.M = require('./index.js');
 global.T = require('oswst');
 global.assert = require('chai').assert;
 
-describe('oswsm@'+require('../package.json').version, function() {
+describe(require('../package.json').name+'@'+require('../package.json').version, function() {
     require('./selector/test.js');
     require('./tag/test.js');
     require('./single/test.js');
