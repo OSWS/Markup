@@ -1,0 +1,34 @@
+{
+  "name": "oswsm",
+  "version": "1.0.0",
+  "description": "Markup templating core",
+  "keywords": [],
+  "author": "Open Source Web Standards <opensourcewebstandards@gmail.com> (http://osws.github.io/OSWS)",
+  "homepage": "http://osws.github.io/Markup",
+  "bugs": {
+    "url": "https://github.com/OSWS/Markup/issues",
+    "email": "opensourcewebstandards@gmail.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OSWS/Markup"
+  },
+  "dependencies": {
+    "oswst": "OSWS/Templates#1.0.0"
+  },
+  "devDependencies": {
+    "mocha": "^2.1.0",
+    "chai": "^1.10.0",
+    "gulp": "^3.8.10",
+    "gulp-browserify": "^0.5.1",
+    "gulp-debug": "^2.0.0",
+    "gulp-plumber": "^0.6.6",
+    "gulp-rename": "^1.2.0",
+    "gulp-uglifyjs": "^0.6.0"
+  },
+  "scripts": {
+    "test": "mocha sources/test.js"
+  },
+  "main": "sources/index.js"
+}
