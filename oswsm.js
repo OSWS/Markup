@@ -723,6 +723,8 @@ for (var key in exports._doubles) {
 // .___key
 // Additional Information. Read-only.
 
+module.exports.data = require('oswst').data;
+
 require('./selector/index.js')(module.exports);
 require('./tag/index.js')(module.exports);
 require('./single/index.js')(module.exports);
@@ -731,7 +733,7 @@ require('./singles/index.js')(module.exports);
 require('./doubles/index.js')(module.exports);
 
 if (typeof(window) == 'object') window['oswsm'] = module.exports;
-},{"./double/index.js":11,"./doubles/index.js":12,"./selector/index.js":14,"./single/index.js":15,"./singles/index.js":16,"./tag/index.js":17}],14:[function(require,module,exports){
+},{"./double/index.js":11,"./doubles/index.js":12,"./selector/index.js":14,"./single/index.js":15,"./singles/index.js":16,"./tag/index.js":17,"oswst":8}],14:[function(require,module,exports){
 // Parser css selector.
 
 module.exports = function(exports) {

@@ -13,6 +13,8 @@
 // .___key
 // Additional Information. Read-only.
 
+module.exports.data = require('oswst').data;
+
 require('./selector/index.js')(module.exports);
 require('./tag/index.js')(module.exports);
 require('./single/index.js')(module.exports);
