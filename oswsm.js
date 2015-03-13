@@ -688,6 +688,8 @@ module.exports = function(exports) {
                 } else if(typeof(arguments[a]) == 'object') {
                     if (arguments[a] instanceof oswst.Compiler) this.append(arguments[a]);
                     else this.attr(arguments[a]);
+                } else if(typeof(arguments[a]) == 'function') {
+                    this.append(arguments[a]);
                 }
             }
         };
