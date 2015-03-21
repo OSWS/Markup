@@ -18,8 +18,8 @@ module.exports = function(exports) {
             return this;
         };
         
-        // (context: TContext) => this;
-        this.__compile = function(context) {
+        // (compilation: Compilation) => this;
+        this.__compile = function(compilation) {
             return ['<', this._name, this.__attr(), '>', this._data, '</', this._name, '>'];
         };
         

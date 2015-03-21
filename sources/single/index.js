@@ -22,8 +22,8 @@ module.exports = function(exports) {
         this.append = undefined;
         this.prepend = undefined;
         
-        // (context: TContext) => this;
-        this.__compile = function(context) {
+        // (compilation: Compilation) => this;
+        this.__compile = function(compilation) {
             return ['<', this._name, this.__attr(), '/>'];
         };
         
