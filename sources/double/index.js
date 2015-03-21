@@ -29,7 +29,7 @@ module.exports = function(exports) {
                 if (typeof(arguments[a]) == 'string') {
                     this.selector(arguments[a]);
                 } else if(typeof(arguments[a]) == 'object') {
-                    if (arguments[a] instanceof oswst.Compiler) this.append(arguments[a]);
+                    if (arguments[a] instanceof oswst.Node) this.append(arguments[a]);
                     else this.attr(arguments[a]);
                 } else if(typeof(arguments[a]) == 'function') {
                     this.append(arguments[a]);
