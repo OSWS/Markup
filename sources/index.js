@@ -1,25 +1,13 @@
-// Rules.
+exports.data = require('oswst').data;
 
-// Comments with instructions in the style of language TypeScript.
-// => return
-// =>> callback
+require('./selector/index.js')(exports);
 
-// ._key
-// Utilitarian option, not intended for user use.
+require('./tag/index.js')(exports);
 
-// .__key
-// Utilitarian function, not intended for user use.
+require('./single/index.js')(exports);
+require('./double/index.js')(exports);
 
-// .___key
-// Additional Information. Read-only.
-
-module.exports.data = require('oswst').data;
-
-require('./selector/index.js')(module.exports);
-require('./tag/index.js')(module.exports);
-require('./single/index.js')(module.exports);
-require('./double/index.js')(module.exports);
-require('./singles/index.js')(module.exports);
-require('./doubles/index.js')(module.exports);
+require('./singles/index.js')(exports);
+require('./doubles/index.js')(exports);
 
 if (typeof(window) == 'object') window['oswsm'] = module.exports;
