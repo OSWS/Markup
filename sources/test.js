@@ -1,12 +1,11 @@
-global.M = require('./index.js');
-global.T = require('oswst');
-global.assert = require('chai').assert;
-
 describe(require('../package.json').name+'@'+require('../package.json').version, function() {
-    require('./selector/test.js');
-    require('./tag/test.js');
-    require('./single/test.js');
-    require('./double/test.js');
-    require('./singles/test.js');
-    require('./doubles/test.js');
+    require('./selector/test');
+    
+    require('./tag/test');
+    
+    require('./single/test');
+    require('./double/test');
+    
+    require('./singles/test');
+    require('./doubles/test');
 });
