@@ -47,8 +47,8 @@ module.exports = function(exports) {
         
         this.extend = function() {
             var extension = prototype.extend.apply(this, arguments);
-            oswst.static(extension, 'attr');
-            oswst.static(extension, 'static');
+            oswst.__static(extension, 'attr');
+            oswst.__static(extension, 'static');
             return extension;
         };
     })
