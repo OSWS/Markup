@@ -18,7 +18,7 @@ module.exports = function(exports) {
             return this;
         };
         
-        // (context: TContext, callback: TCallback) => this;
+        // (context: TContext) => this;
         this.__compile = function(context) {
             return ['<', this._name, this.__attr(), '>', this._data, '</', this._name, '>'];
         };

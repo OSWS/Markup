@@ -22,7 +22,7 @@ module.exports = function(exports) {
         this.append = undefined;
         this.prepend = undefined;
         
-        // (context: TContext, callback: TCallback) => this;
+        // (context: TContext) => this;
         this.__compile = function(context) {
             return ['<', this._name, this.__attr(), '/>'];
         };
