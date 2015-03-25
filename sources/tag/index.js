@@ -12,7 +12,7 @@ module.exports = function(exports) {
         // { [key: string]: TData };
         // this._attr = undefined;
         
-        // () => TData;
+        // () => Array<TData>;
         // =>> ' key="value"'
         this.__attr = function() {
             var result = [];

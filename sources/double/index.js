@@ -4,7 +4,7 @@ var oswst = require('oswst');
 
 module.exports = function(exports) {
     
-    // [new] (selector?: string, attr?: object) => this;
+    // [new] (...arguments: Array<string|Node|TAttr>) => this;
     exports.Double = exports.Tag
     .extend(function() {
         var prototype = this.___prototype;

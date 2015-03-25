@@ -1,5 +1,8 @@
 // Parser css selector.
 
+// TSelector = string;
+// TAttr = { [key: string]: TData };
+
 module.exports = function(exports) {
     
     // (data: string, reg: RegExp) => string[][];
@@ -15,7 +18,7 @@ module.exports = function(exports) {
     // https://www.regex101.com/r/cM5jC6/13
     exports._selectorRegExp = (/(\[)|(\])|#([-\w\d]+)|\.([-\w\d]+)|([\w\d-]+)="(['\w\d\s-:\\\/\.\,\]\[={}<>%@#$%^&*~`]*)"|([\w\d-]+)='(["\w\d\s-:\\\/\.\,\]\[={}<>%@#$%^&*~`]*)'|([\w\d-]+)=([\w\d-:\\\/\.={}<>%@#$%^&*~`]*)|("['\w\d\s-:\\\/\.\,\]\[={}<>%@#$%^&*~`]+")|('["\w\d\s-:\\\/\.\,\]\[={}<>%@#$%^&*~`]+')|([_\w-:\\\/]+)/g);
     
-    // (attributes: TAttributes, selector: TSelector) => void;
+    // (attributes: TAttr, selector: TSelector) => void;
     exports.selector = function(attributes, selector) {
         var matchs = exports.regExpSearch(selector, exports._selectorRegExp);
         var isAttr = false;
